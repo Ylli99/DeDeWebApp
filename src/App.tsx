@@ -13,7 +13,6 @@ import {
 } from './theme/theme';
 import MainPage from './pages/MainPage';
 import {useAppDispatch} from "./store/store";
-import {fetchGithubProfile, fetchGithubUserProfile} from "./store/thunks/appThunk";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "./firebase/firebase";
 import {setFirebaseError, setFirebaseLoading, setFirebaseUser} from "./store/authReducer";
@@ -21,7 +20,7 @@ import {sendFirebaseEmailVerification} from "./store/thunks/authThunk";
 import LoaderPage from "./pages/LoaderPage";
 
 function App() {
-    const {githubProfiles, githubProfile, theme} = useSelector((state: RootState) => state.app);
+    const {theme} = useSelector((state: RootState) => state.app);
     const dispatch = useAppDispatch();
     const [user, loading, error] = useAuthState(auth);
     const [localTheme, setLocalTheme] = useState(lightTheme)

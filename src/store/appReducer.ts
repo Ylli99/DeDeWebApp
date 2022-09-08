@@ -1,8 +1,4 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {lightTheme} from "../theme/theme";
-import {Theme} from "@mui/material/styles";
-
-
 
 interface AppSliceState {
     drawerOpen: boolean;

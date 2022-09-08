@@ -30,7 +30,7 @@ const ThemeMenuList = () => {
             handleClose()
             dispatch(setTheme(selectedTheme))
         }
-    }, [selectedTheme])
+    }, [selectedTheme, dispatch, theme])
 
     return (
         <div>
