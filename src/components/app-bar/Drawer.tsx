@@ -91,7 +91,7 @@ export default function PersistentDrawerRight() {
             <AppBar elevation={5} position="fixed" open={open} style={{flex: 1}}>
                 <Toolbar>
                     <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-                        DeDelivery
+                        random app
                     </Typography>
 
                     <IconButton
@@ -130,7 +130,7 @@ export default function PersistentDrawerRight() {
                             </IconButton>
                         </Grid>
                         <Grid item>
-                            <Typography style={{fontFamily: "Pacifico", fontSize: "1.2em", textTransform: "none", color: "black"}}>Menu</Typography>
+                            <Typography>Menu</Typography>
                         </Grid>
                     </Grid>
                 </DrawerHeader>
@@ -138,13 +138,13 @@ export default function PersistentDrawerRight() {
                 <List>
                     <Grid container direction={'column'} alignItems={'center'} justifyContent={'space-between'}>
                         <Grid item alignSelf={'center'}>
-                            <Button style={{backgroundColor: 'black', marginBottom: '0.3em', width: '17.1em'}}>
-                                <Typography style={{fontFamily: "Pacifico", fontSize: "2em", textTransform: "none", color: "white"}}>Login</Typography>
+                            <Button style={{borderRadius: 0, backgroundColor: '#464141', marginBottom: '0.3em', width: '17.1em'}}>
+                                <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Login</Typography>
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button style={{backgroundColor: 'grey', marginBottom: '0.3em', width: '17.1em'}}>
-                                <Typography style={{fontFamily: "Pacifico", fontSize: "2em", textTransform: "none", color: "white"}}>Register</Typography>
+                            <Button style={{borderRadius: 0, backgroundColor: '#cb4242', marginBottom: '0.3em', width: '17.1em'}}>
+                                <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Register</Typography>
                             </Button>
                         </Grid>
                     </Grid>
@@ -156,8 +156,8 @@ export default function PersistentDrawerRight() {
                             <Link to={`/${text.toLowerCase()}`} style={{textDecoration: 'none', flex: 1, color: 'inherit'}}>
                                 <ListItemButton>
                                     <ListItemIcon>
-                                        {text === 'Home' ? <HomeRoundedIcon to={'/'}/> : (
-                                            text === 'About' ? <AutoStoriesRoundedIcon to={'/about'}/> : <SendRoundedIcon to={'/contact'}/>)
+                                        {text === 'Home' ? <HomeRoundedIcon to={'/'} fontSize="large"/> : (
+                                            text === 'About' ? <AutoStoriesRoundedIcon to={'/about'} fontSize="large"/> : <SendRoundedIcon to={'/contact'} fontSize="large"/>)
                                         }
                                     </ListItemIcon>
                                     <ListItemText primary={text} />
