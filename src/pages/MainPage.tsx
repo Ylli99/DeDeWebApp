@@ -1,14 +1,12 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import AppBarComponent from '../components/app-bar/TopBar';
-import SideBar from '../components/app-bar/SideBar';
 import {RoutesSwitch} from '../router/Routes';
 import React from 'react';
 import {useTheme} from '@mui/material/styles';
 import background from "../assets/images/background.jpg";
-import {handleDrawerChange} from "../store/appReducer";
 import {useAppDispatch} from "../store/store";
 import {useSelector} from "react-redux";
 import {RootState} from "../store/rootReducer";
+import PersistentDrawerRight from '../components/app-bar/Drawer';
 
 const MainPage = () => {
     const theme = useTheme();
@@ -27,11 +25,7 @@ const MainPage = () => {
                     color: theme.textColor,
                 }}>
         <CssBaseline/>
-        <div onBlur={() => drawerOpen ? dispatch(handleDrawerChange(!drawerOpen)) : null}>
-            <AppBarComponent/>
-            <SideBar/>
-        </div>
-
+        <PersistentDrawerRight/>
         <RoutesSwitch/>
     </div>;
 

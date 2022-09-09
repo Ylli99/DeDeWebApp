@@ -74,7 +74,7 @@ const SideBar = () => {
         drawerOpen,
     } = useSelector((state: RootState) => state.app);
 
-    return <Drawer variant="permanent"
+    return <Drawer variant="temporary"
                    open={drawerOpen}
     sx={{ '& .MuiDrawer-paper': {
             backgroundColor: theme.textColor,
@@ -105,7 +105,7 @@ const SideBar = () => {
                                 justifyContent: 'center',
                             }}>
                             {
-                                index % 2 === 0 ? <Tooltip title={'Home'}><InboxIcon/></Tooltip> : <Tooltip title={"About"}><MailIcon/></Tooltip>
+                                index % 2 === 0 ? <InboxIcon/> : <Tooltip title={"About"}><MailIcon/></Tooltip>
                             }
                         </ListItemIcon>
                         <ListItemText primary={route.key} sx={{opacity: drawerOpen ? 1 : 0}}/>
