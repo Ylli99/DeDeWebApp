@@ -1,11 +1,7 @@
-import {Divider, Grid, Paper, Typography} from "@mui/material";
-import {useTheme} from "@mui/material/styles";
+import {Grid} from "@mui/material";
+// import {useTheme} from "@mui/material/styles";
 import * as React from "react";
-import YoutubeVideoLink from "../components/about/YoutubeVideoLink";
-import CommentsForm from "../components/about/CommentsForm";
-import RegisterForm from "../components/about/RegisterForm";
-import LoginForm from "../components/about/LoginForm";
-import useWindowSize from "../hooks/useWindowSize";
+// import useWindowSize from "../hooks/useWindowSize";
 
 interface UserInfoFriend {
     name: string,
@@ -21,23 +17,11 @@ export interface UserInfo {
 }
 
 const AboutPage = () => {
-    const theme = useTheme()
-    const windowSize = useWindowSize()
+    // const theme = useTheme()
+    // const windowSize = useWindowSize()
 
     return <Grid container className={'Center'}>
-        <Paper
-            className={'Center'}
-            sx={{
-                backgroundColor: theme.palette.secondary.main,
-                color: theme.textColor,
-                flexDirection: 'column',
-                flex: 1,
-                maxWidth: windowSize.innerWidth >= 500 ? '40em' : '20em',
-                padding: '1.5em',
-                userSelect: 'none',
-            }}>
 
-        </Paper>
     </Grid>
 
 };

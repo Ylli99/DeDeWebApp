@@ -105,7 +105,7 @@ const SideBar = () => {
                                 justifyContent: 'center',
                             }}>
                             {
-                                index % 2 === 0 ? <Tooltip title={'Home'}><InboxIcon/></Tooltip> : <Tooltip title={"Short bio"}><MailIcon/></Tooltip>
+                                index % 2 === 0 ? <Tooltip title={'Home'}><InboxIcon/></Tooltip> : <Tooltip title={"About"}><MailIcon/></Tooltip>
                             }
                         </ListItemIcon>
                         <ListItemText primary={route.key} sx={{opacity: drawerOpen ? 1 : 0}}/>
