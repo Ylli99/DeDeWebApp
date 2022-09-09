@@ -22,6 +22,7 @@ const MainPage = () => {
                     overflow: 'auto',
                     height: `calc('100%' - '4em')`,
                     backgroundImage: `url(${background})`,
+                    background: 'no-repeat',
                     backgroundColor: theme.backgroundColor,
                     color: theme.textColor,
                 }}>
