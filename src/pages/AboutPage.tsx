@@ -21,7 +21,23 @@ const AboutPage = () => {
     // const windowSize = useWindowSize()
 
     return <Grid container className={'Center'}>
+<<<<<<< HEAD
 
+=======
+        <Paper
+            className={'Center'}
+            sx={{
+                backgroundColor: theme.palette.secondary.main,
+                color: theme.textColor,
+                flexDirection: 'column',
+                flex: 1,
+                maxWidth: windowSize.innerWidth >= 500 ? '40em' : '20em',
+                padding: '1.5em',
+                userSelect: 'none',
+            }}>
+
+        </Paper>
+>>>>>>> main
     </Grid>
 
 };
