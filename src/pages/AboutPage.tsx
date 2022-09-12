@@ -1,6 +1,8 @@
-import {Grid} from "@mui/material";
+import {Grid, Paper} from '@mui/material';
 // import {useTheme} from "@mui/material/styles";
 import * as React from "react";
+import useWindowSize from '../hooks/useWindowSize';
+import {useTheme} from '@mui/material/styles';
 // import useWindowSize from "../hooks/useWindowSize";
 
 interface UserInfoFriend {
@@ -17,13 +19,10 @@ export interface UserInfo {
 }
 
 const AboutPage = () => {
-    // const theme = useTheme()
-    // const windowSize = useWindowSize()
+    const theme = useTheme()
+    const windowSize = useWindowSize()
 
     return <Grid container className={'Center'}>
-<<<<<<< HEAD
-
-=======
         <Paper
             className={'Center'}
             sx={{
@@ -37,8 +36,7 @@ const AboutPage = () => {
             }}>
 
         </Paper>
->>>>>>> main
-    </Grid>
+        </Grid>
 
 };
 

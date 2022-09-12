@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -21,6 +20,7 @@ import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded';
 import Button from '@mui/material/Button';
 import {Grid} from '@mui/material';
 import {Link} from 'react-router-dom';
+import {ChevronRight} from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -74,8 +74,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerRight() {
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -126,7 +126,7 @@ export default function PersistentDrawerRight() {
                     <Grid container alignItems={'center'} >
                         <Grid item style={{marginRight: '3em'}}>
                             <IconButton onClick={handleDrawerClose}>
-                                <ChevronLeftIcon/>
+                                <ChevronRight/>
                             </IconButton>
                         </Grid>
                         <Grid item>
@@ -139,19 +139,23 @@ export default function PersistentDrawerRight() {
                     <Grid container direction={'column'} alignItems={'center'} justifyContent={'space-between'}>
                         <Grid item alignSelf={'center'}>
                             <Button style={{borderRadius: 0, backgroundColor: '#464141', marginBottom: '0.3em', width: '17.1em'}}>
-                                <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Login</Typography>
+                                <Link to={'/login'} style={{textDecoration: 'none'}}>
+                                    <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Login</Typography>
+                                </Link>
                             </Button>
                         </Grid>
                         <Grid item>
                             <Button style={{borderRadius: 0, backgroundColor: '#cb4242', marginBottom: '0.3em', width: '17.1em'}}>
-                                <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Register</Typography>
+                                <Link to={'/register'} style={{textDecoration: 'none'}}>
+                                    <Typography style={{fontFamily: "Pacifico", fontSize: "1.7em", textTransform: "none", color: "white"}}>Register</Typography>
+                                </Link>
                             </Button>
                         </Grid>
                     </Grid>
                 </List>
                 <Divider />
                 <List>
-                    {['Home', 'About', 'Contact'].map((text, index) => (
+                    {['Home', 'About', 'Contact'].map((text) => (
                         <ListItem key={text} disablePadding>
                             <Link to={`/${text.toLowerCase()}`} style={{textDecoration: 'none', flex: 1, color: 'inherit'}}>
                                 <ListItemButton>

@@ -1,15 +1,23 @@
 import {initializeApp} from "firebase/app"
 import {getFirestore} from "firebase/firestore"
-import {getAuth} from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+} from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCUyArxwXXzQUZnwUIM5RLxrJ02HXD5cQg",
-    authDomain: "norbifirestore.firebaseapp.com",
-    projectId: "norbifirestore",
-    storageBucket: "norbifirestore.appspot.com",
-    messagingSenderId: "549508671232",
-    appId: "1:549508671232:web:f120508af40adee098b5e5",
-    measurementId: "G-5LK3DB9CE7"
+    apiKey: "AIzaSyARlx8UQDg_FRDB03-vs6Id8Gfqhy9RIjo",
+    authDomain: "dede-auth.firebaseapp.com",
+    projectId: "dede-auth",
+    storageBucket: "dede-auth.appspot.com",
+    messagingSenderId: "783257879455",
+    appId: "1:783257879455:web:b29f30516fe70469b2b3aa",
+    measurementId: "G-4GZWJZWXPZ"
 };
 
 // Initialize Firebase
