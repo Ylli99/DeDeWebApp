@@ -7,7 +7,7 @@ import {
 } from "../../firebase/firestore/firestore";
 import {auth} from "../../firebase/firebase"
 import "./Register.css";
-function Register() {
+const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
